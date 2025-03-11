@@ -5,7 +5,7 @@
 ### Addition
 
 Base.:+(d::DNumber) = d
-Base.:+(d1::DNumber{T1}, D2::DNumber{T2}) where{T1 <: Number, T2 <: Number} = DNumber(d1[1] + d2[1], d1[2] + d2[2])
+Base.:+(d1::DNumber, d2::DNumber) = DNumber(d1[1] + d2[1], d1[2] + d2[2])
 Base.:+(n::Number, d::DNumber) = DNumber(n + d[1], d[2])
 Base.:+(d::DNumber, n::Number) = n + d
 
