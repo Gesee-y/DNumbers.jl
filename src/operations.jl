@@ -24,7 +24,7 @@ Base.:*(d::DNumber, n::Number) = n * d
 
 ### Division 
 
-Base.:/(d::DNumber,n::Number) = n == 0 ? throw(ZeroDivisionError("Trying to divide by 0")) : DNumber(d[1]\n, d[2]\n)
+Base.:/(d::DNumber,n::Number) = n == 0 ? throw(ZeroDivisionError("Trying to divide by 0")) : DNumber(d[1]/n, d[2]/n)
 Base.:/(n::Number, d::DNumber) = d[1] == 0 ? throw(ZeroDivisionError("Trying to divide by 0")) : (n * conj(d))/d[1]^2
 Base.:/(d1::DNumber, d2::DNumber) = d2[1] == 0 ? throw(ZeroDivisionError("Trying to divide by 0")) : (d1 * conj(d2))/(d2[1])^2
 
